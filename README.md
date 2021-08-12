@@ -1,10 +1,8 @@
-# DJS-Handler-Typescript
-
-DJS Handler with typescript!
+# Discord.JS Command Handler With Typescript
 
 # How to use
 
-if you don't have yarn, please do npm i -g yarn, then you can run `yarn install`
+Please do npm i -g yarn if you don't have yarn installed on your pc, then you can run `yarn install`
 
 ### Create config.json in your main folder (not inside src folder)
 
