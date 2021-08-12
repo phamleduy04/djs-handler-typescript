@@ -12,7 +12,8 @@ if you don't have yarn, please do npm i -g yarn, then you can run `yarn install`
 {
 	"token": "",
 	"prefix": "",
-	"mongoURI": ""
+	"mongoURI": "",
+	"testServer": ""
 }
 ```
 
