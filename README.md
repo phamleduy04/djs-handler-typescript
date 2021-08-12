@@ -21,18 +21,12 @@ if you don't have yarn, please do npm i -g yarn, then you can run `yarn install`
 ```ts
 import { Command } from '../../interfaces';
 export const command: Command = {
-	//Command Name
-	name: '',
-	//Command Description
-	description: '',
-	//Command Aliases ex: ['p']
-	aliases: [],
-	// Command Usage
-	usage: 'ping',
-	// if this property is true, than this command will only available at your test server
-	testOnly: false,
-	// Permissions, ex ['BAN_MEMBERS', 'KICK_MEMBERS']
-	permissions: [],
+	name: '', //Command Name
+	description: '', //Command Description
+	aliases: [], //Command Aliases ex: ['p']
+	usage: '', // Command Usage
+	testOnly: false, // if this property is true, than this command will only available at your test server
+	permissions: [], // Permissions, ex ['BAN_MEMBERS', 'KICK_MEMBERS']
 	run: async (client, message, args) => {
 		//Write your code here
 	},
@@ -44,12 +38,9 @@ export const command: Command = {
 ```ts
 import { Slash } from '../../interfaces';
 export const slash: Slash = {
-	//Command Name
-	name: '',
-	//Command Description
-	description: '',
-	//If this property is true, than this command will only available at your test server
-	testOnly: false,
+	name: '', //Command Name
+	description: '', //Command Description
+	testOnly: false, //If this property is true, than this command will only available at your test server
 	run: async (client, interaction, args) => {
 		//Write your code here
 	},
@@ -61,8 +52,7 @@ export const slash: Slash = {
 ```ts
 import  { Event }  from  '../interfaces';
 export  const  event:  Event  =  {
-	//Event name, ex: ready
-	name: '',
+	name: '', //Event name, ex: ready
 	run: async(client) {
 	//Write your code here
 	}
@@ -70,7 +60,5 @@ export  const  event:  Event  =  {
 ```
 
 ## Credit
-
-All credit goes to:
-[reconlx](https://www.youtube.com/channel/UCC-5dJ0BPTRSMaoDxntduHg)
-[CodeLyon](https://www.youtube.com/channel/UC08G-UJT58SbkdmcOYyOQVw)
+* [reconlx](https://www.youtube.com/channel/UCC-5dJ0BPTRSMaoDxntduHg)
+* [CodeLyon](https://www.youtube.com/channel/UC08G-UJT58SbkdmcOYyOQVw)
