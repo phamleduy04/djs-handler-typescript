@@ -1,6 +1,5 @@
 import Client from '../Client';
-import { Message, Permissions } from 'discord.js';
-const Perm = Object.keys(Permissions.FLAGS);
+import { Message, PermissionString } from 'discord.js';
 
 interface Run {
 	(client: Client, message: Message, args: string[]);
@@ -12,6 +11,6 @@ export interface Command {
 	aliases?: string[];
 	usage: string;
 	testOnly: boolean;
-	permissions?: string[];
+	permissions?: PermissionString[]
 	run: Run;
 }

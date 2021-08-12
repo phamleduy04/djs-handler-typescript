@@ -80,11 +80,9 @@ class Bot extends Client {
 			for (const file of slash) {
 				const { slash } = require(`${slashPath}/${dir}/${file}`);
 				if(slash.testOnly) {
-					this.slash.set(slash.name, slash)
-					this.console.log({'private': slash})
+					this.slash.set(slash.name, slash)	
 					return arrayOfSlashPrivate.push(slash)
 				}
-				this.console.log({'public': slash})
 				this.slash.set(slash.name, slash);
 				arrayOfSlashCommands.push(slash);
 			}
@@ -92,9 +90,9 @@ class Bot extends Client {
 		});
 		this.on('ready', async () => {
 			await this.guilds.cache
-				.get('790422584688115713')
+				.get('your guild id')
 				.commands.set(arrayOfSlashPrivate);
-			// await this.application.commands.set(arrayOfSlashCommands);
+			await this.application.commands.set(arrayOfSlashCommands);
 		});
 	}
 }
