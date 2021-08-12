@@ -9,9 +9,9 @@ if you don't have yarn, please do npm i -g yarn, then you can run `yarn install`
 ### Create config.json in your main folder (not inside src folder)
 ```json
 {
-	"token":  "",
-	"prefix":  "",
-	"mongoURI":  ""
+  "token":  "",
+  "prefix":  "",
+  "mongoURI":  ""
 }
 ```
 
@@ -20,21 +20,21 @@ if you don't have yarn, please do npm i -g yarn, then you can run `yarn install`
 ```ts
 import  { Command }  from  '../../interfaces';
 export  const  command:  Command  =  {
-	//Command Name
-	name:  '',
-	//Command Description
-	description:  '',
-	//Command Aliases ex: ['p']
-	aliases: [],
-	// Command Usage
-	usage:  'ping',
-	// if this property is true, than this command will only available at your test server
-	testOnly:  false,
-	// Permissions, ex ['BAN_MEMBERS', 'KICK_MEMBERS']
-	permissions: [],
-	run:  async  (client,  message,  args)  =>  {
+     //Command Name
+     name:  '',
+     //Command Description
+     description:  '',
+     //Command Aliases ex: ['p']
+     aliases: [],
+     // Command Usage
+     usage:  'ping',
+     // if this property is true, than this command will only available at your test server
+     testOnly:  false,
+     // Permissions, ex ['BAN_MEMBERS', 'KICK_MEMBERS']
+     permissions: [],
+     run:  async  (client,  message,  args)  =>  {
 		//Write your code here
-	},
+     },
 };
 ```
 
