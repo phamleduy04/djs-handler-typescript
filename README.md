@@ -1,5 +1,5 @@
 # DJS-Handler-Typescript
-DJS Handler with typescript!Cancel changes
+DJS Handler with typescript support
 
 
 # How to use
