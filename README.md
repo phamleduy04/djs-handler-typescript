@@ -40,6 +40,7 @@ export const slash: Slash = {
 	name: '', //Command Name
 	description: '', //Command Description
 	testOnly: false, //If this property is true, than this command will only available at your test server
+	options: [], //Slash Command Options
 	run: async (client, interaction, args) => {
 		//Write your code here
 	},
