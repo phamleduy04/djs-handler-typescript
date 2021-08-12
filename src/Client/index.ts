@@ -3,12 +3,9 @@ import conf from '../../config.json';
 import path from 'path';
 import { Slash, Command, Event, Config } from '../interfaces';
 import mongoose from 'mongoose';
-import { glob } from 'glob';
-import { promisify } from 'util';
 import consola from 'consola';
 import chalk from 'chalk';
 import { readdirSync } from 'fs';
-const globPromise = promisify(glob);
 class Bot extends Client {
 	public commands: Collection<string, Command> = new Collection();
 	public slash: Collection<string, Slash> = new Collection();
