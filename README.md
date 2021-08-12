@@ -61,6 +61,6 @@ export  const  event:  Event  =  {
 }
 ```
 
-## Credit
+## Credit / reference
 * [reconlx](https://www.youtube.com/channel/UCC-5dJ0BPTRSMaoDxntduHg)
 * [CodeLyon](https://www.youtube.com/channel/UC08G-UJT58SbkdmcOYyOQVw)
