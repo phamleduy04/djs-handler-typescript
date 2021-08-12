@@ -24,7 +24,6 @@ class Bot extends Client {
 
 	public async init() {
 		this.login(this.config.token);
-
 		if (this.config.mongoURI) {
 			mongoose
 				.connect(this.config.mongoURI, {
@@ -41,6 +40,7 @@ class Bot extends Client {
 		} else {
 			this.console.info(`You don't have mongoURI`);
 		}
+		if(!this.config.testServer) this.console.info(`You haven't set the server id`)
 		// Commands
 		const commandPath = path.join(__dirname, '..', 'Commands');
 		readdirSync(commandPath).forEach((dir) => {

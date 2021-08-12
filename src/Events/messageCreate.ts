@@ -16,6 +16,7 @@ export const event: Event = {
 		const command = client.commands.get(cmd) || client.aliases.get(cmd);
 		const validPermissions = Object.keys(Permissions.FLAGS);
 		if (command) {
+			if(command.testOnly && message.guild.id !== client.config.testServer) return;
 			if (command?.permissions.length) {
 				let invalidPerms = [];
 				for (const perm of command.permissions) {

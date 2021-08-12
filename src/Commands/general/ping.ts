@@ -5,7 +5,7 @@ export const command: Command = {
 	description: 'Ping command',
 	aliases: [],
 	usage: 'ping',
-	testOnly: false,
+	testOnly: true,
 	permissions: [],
 	run: async (client, message, args) => {
 		message.reply(`${client.ws.ping}`);
