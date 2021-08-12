@@ -1,5 +1,7 @@
 # Discord.JS Command Handler With Typescript
 
+Sorry, I'm not good at english
+
 # How to use
 
 Please do npm i -g yarn if you don't have yarn installed on your pc, then you can run `yarn install`
@@ -59,6 +61,6 @@ export  const  event:  Event  =  {
 }
 ```
 
-## Credit
+## Credit / reference
 * [reconlx](https://www.youtube.com/channel/UCC-5dJ0BPTRSMaoDxntduHg)
 * [CodeLyon](https://www.youtube.com/channel/UC08G-UJT58SbkdmcOYyOQVw)
