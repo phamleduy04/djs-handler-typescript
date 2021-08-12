@@ -53,7 +53,7 @@ export const slash: Slash = {
 import  { Event }  from  '../interfaces';
 export  const  event:  Event  =  {
 	name: '', //Event name, ex: ready
-	run: async(client) {
+	run: async(client) => {
 	//Write your code here
 	}
 }
