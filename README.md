@@ -70,5 +70,5 @@ export  const  event:  Event  =  {
 ## Credit
 All credit goes to:
 * [reconlx](https://www.youtube.com/channel/UCC-5dJ0BPTRSMaoDxntduHg)
-* [CodeLyon](https://www.youtube.com/channel/UC08G-UJT58SbkdmcOYyOQVw)# djs-handler-typescript
+* [CodeLyon](https://www.youtube.com/channel/UC08G-UJT58SbkdmcOYyOQVw)
 
