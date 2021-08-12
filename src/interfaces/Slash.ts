@@ -14,7 +14,7 @@ export interface Options {
 export interface Slash {
 	name: string;
 	description: string;
-	options?:  Array<ApplicationCommandOption>;
+	options?: Array<ApplicationCommandOption>;
 	defaultPermission?: boolean;
 	testOnly: boolean;
 	run: Run;

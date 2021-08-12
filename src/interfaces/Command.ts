@@ -11,6 +11,6 @@ export interface Command {
 	aliases?: string[];
 	usage: string;
 	testOnly: boolean;
-	permissions?: PermissionString[]
+	permissions?: PermissionString[];
 	run: Run;
 }

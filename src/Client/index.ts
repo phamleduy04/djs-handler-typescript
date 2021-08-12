@@ -79,9 +79,9 @@ class Bot extends Client {
 
 			for (const file of slash) {
 				const { slash } = require(`${slashPath}/${dir}/${file}`);
-				if(slash.testOnly) {
-					this.slash.set(slash.name, slash)	
-					return arrayOfSlashPrivate.push(slash)
+				if (slash.testOnly) {
+					this.slash.set(slash.name, slash);
+					return arrayOfSlashPrivate.push(slash);
 				}
 				this.slash.set(slash.name, slash);
 				arrayOfSlashCommands.push(slash);
@@ -90,7 +90,7 @@ class Bot extends Client {
 		});
 		this.on('ready', async () => {
 			await this.guilds.cache
-				.get('your guild id')
+				.get('790422584688115713')
 				.commands.set(arrayOfSlashPrivate);
 			await this.application.commands.set(arrayOfSlashCommands);
 		});
