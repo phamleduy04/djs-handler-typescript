@@ -1,5 +1,7 @@
 # Discord.JS Command Handler With Typescript
 
+Sorry, I'm not good at english
+
 # How to use
 
 Please do npm i -g yarn if you don't have yarn installed on your pc, then you can run `yarn install`
