@@ -87,7 +87,7 @@ class Bot extends Client {
 		});
 		this.on('ready', async () => {
 			await this.guilds.cache
-				.get('790422584688115713')
+				.get(this.config.testServer)
 				.commands.set(arrayOfSlashPrivate);
 			await this.application.commands.set(arrayOfSlashCommands);
 		});
