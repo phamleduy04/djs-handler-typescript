@@ -16,6 +16,7 @@ class Bot extends Client {
 	public constructor() {
 		super({
 			intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_WEBHOOKS'],
+			partials: ['MESSAGE', 'CHANNEL', 'GUILD_MEMBER', 'USER'],
 		});
 	}
 
