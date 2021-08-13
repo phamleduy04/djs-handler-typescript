@@ -20,13 +20,13 @@ export const event: Event = {
 			if (command?.permissions.length) {
 				let invalidPerms = [];
 				for (const perm of command.permissions) {
-					if (!validPermissions.includes(perm)) {
+					if (!validPermissions.includes(perm.toString())) {
 						client.console.error(`Invalid Permission: ${perm}`);
 						return message.channel.send(
 							`Error in our code: invalid permission: \`${perm}\``
 						);
 					}
-					if (!message.member.permissions.has([perm as any])) {
+					if (!message.member.permissions.has([perm])) {
 						invalidPerms.push(perm);
 					}
 				}
