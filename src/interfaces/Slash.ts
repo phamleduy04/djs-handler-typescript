@@ -1,21 +1,15 @@
 import Client from '../Client';
-import { CommandInteraction, ApplicationCommandOption } from 'discord.js';
+import {
+	CommandInteraction,
+	ApplicationCommandOption,
+	ApplicationCommandData,
+} from 'discord.js';
 
 interface Run {
 	(client: Client, interaction: CommandInteraction, args: string[]);
 }
 
-export interface Options {
-	name: string;
-	description: string;
-	options: Array<ApplicationCommandOption>;
-}
-
-export interface Slash {
-	name: string;
-	description: string;
-	options?: Array<ApplicationCommandOption>;
-	defaultPermission?: boolean;
+export interface Slash extends ApplicationCommandData {
 	testOnly: boolean;
 	run: Run;
 }
