@@ -1,8 +1,8 @@
 import Client from '../Client';
-import { Message, PermissionString } from 'discord.js';
+import { Message, PermissionResolvable, Snowflake } from 'discord.js';
 
 interface Run {
-	(client: Client, message: Message, args: string[]);
+	(client: Client, message: Message, args: Snowflake[]);
 }
 
 export interface Command {
@@ -11,6 +11,6 @@ export interface Command {
 	aliases?: string[];
 	usage: string;
 	testOnly: boolean;
-	permissions?: PermissionString[];
+	permissions?: PermissionResolvable[];
 	run: Run;
 }
