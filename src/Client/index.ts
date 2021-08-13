@@ -38,7 +38,8 @@ class Bot extends Client {
 		} else {
 			this.console.info(`You don't have mongoURI`);
 		}
-		if(!this.config.testServer) this.console.info(`You haven't set the server id`)
+		if (!this.config.testServer)
+			this.console.info(`You haven't set the server id`);
 		// Commands
 		const commandPath = path.join(__dirname, '..', 'Commands');
 		readdirSync(commandPath).forEach((dir) => {
