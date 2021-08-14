@@ -5,13 +5,10 @@ export const event: Event = {
 	name: 'messageCreate',
 	run: async (client, message: Message) => {
 		if (message.channel.type === 'DM') return;
-		const prefix =
-			client.config.prefix ||
-			message.mentions.members.first().id === client.user.id;
-		if (message.author.bot || !message.content.startsWith(client.config.prefix))
+		if (message.author.bot || !message.content.startsWith(client.config.PREFIX))
 			return;
 		const args = message.content
-			.slice(client.config.prefix.length)
+			.slice(client.config.PREFIX.length)
 			.trim()
 			.split(/ +/g);
 		const cmd = args.shift().toLowerCase();
@@ -19,7 +16,7 @@ export const event: Event = {
 		const command = client.commands.get(cmd) || client.aliases.get(cmd);
 		const validPermissions = Object.keys(Permissions.FLAGS);
 		if (command) {
-			if (command.testOnly && message.guild.id !== client.config.testServer)
+			if (command.testOnly && message.guild.id !== client.config.TESTSERVER)
 				return;
 			if (command?.permissions.length) {
 				let invalidPerms = [];

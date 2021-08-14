@@ -1,6 +1,9 @@
-export interface Config {
-	token: string;
-	prefix: string;
-	mongoURI: string;
-	testServer: string;
-}
+declare namespace NodeJS {
+	export interface ProcessEnv {
+		GITHUB_AUTH_TOKEN: string;
+		TOKEN: string;
+		PREFIX: string;
+		MONGOURI: string;
+		TESTSERVER: string;
+	}
+  }

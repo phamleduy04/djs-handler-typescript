@@ -1,16 +1,19 @@
 import { Client, Collection } from 'discord.js';
+import dotenv from 'dotenv'
+dotenv.config()
 import conf from '../../config.json';
 import path from 'path';
-import { Slash, Command, Event, Config } from '../interfaces';
+import { Slash, Command, Event } from '../interfaces';
 import mongoose from 'mongoose';
 import consola from 'consola';
 import chalk from 'chalk';
 import { readdirSync } from 'fs';
+
 class Bot extends Client {
 	public commands: Collection<string, Command> = new Collection();
 	public slash: Collection<string, Slash> = new Collection();
 	public events: Collection<string, Event> = new Collection();
-	public config: Config = conf;
+	public config = process.env;
 	public aliases: Collection<string, Command> = new Collection();
 	public console = consola;
 	public constructor() {
@@ -21,10 +24,10 @@ class Bot extends Client {
 	}
 
 	public async init() {
-		this.login(this.config.token);
-		if (this.config.mongoURI) {
+		this.login(this.config.TOKEN);
+		if (this.config.MONGOURI) {
 			mongoose
-				.connect(this.config.mongoURI, {
+				.connect(this.config.MONGOURI, {
 					useNewUrlParser: true,
 					useUnifiedTopology: true,
 					useFindAndModify: false,
@@ -38,7 +41,7 @@ class Bot extends Client {
 		} else {
 			this.console.info(`You don't have mongoURI`);
 		}
-		if (!this.config.testServer)
+		if (!this.config.TESTSERVER)
 			this.console.info(`You haven't set the server id`);
 		// Commands
 		const commandPath = path.join(__dirname, '..', 'Commands');
@@ -89,7 +92,7 @@ class Bot extends Client {
 		});
 		this.on('ready', async () => {
 			await this.guilds.cache
-				.get(this.config.testServer)
+				.get(this.config.TESTSERVER)
 				.commands.set(arrayOfSlashPrivate);
 			await this.application.commands.set(arrayOfSlashCommands);
 		});
