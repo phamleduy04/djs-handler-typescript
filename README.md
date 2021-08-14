@@ -6,15 +6,13 @@ Sorry, I'm not good at english
 
 Please do npm i -g yarn if you don't have yarn installed on your pc, then you can run `yarn install`
 
-### Create config.json in your main folder (not inside src folder)
+### Create .env file in your main folder (not inside src folder)
 
-```json
-{
-	"token": "",
-	"prefix": "",
-	"mongoURI": "",
-	"testServer": ""
-}
+```env
+TOKEN= YOUR BOT TOKEN
+PREFIX= YOUR PREFIX
+MONGOURI= YOUR MONGO URL
+TESTSERVER= YOUR TEST SERVER ID
 ```
 
 ### Commands Usage:
@@ -52,13 +50,13 @@ export const slash: Slash = {
 ### Event usage
 
 ```ts
-import  { Event }  from  '../interfaces';
-export  const  event:  Event  =  {
+import { Event } from '../interfaces';
+export const event: Event = {
 	name: '', //Event name, ex: ready
-	run: async(client) => {
-	//Write your code here
-	}
-}
+	run: async (client) => {
+		//Write your code here
+	},
+};
 ```
 
 ### Command Snippet for [Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
@@ -87,5 +85,6 @@ export  const  event:  Event  =  {
 ```
 
 ## Credit / reference
-* [reconlx](https://www.youtube.com/channel/UCC-5dJ0BPTRSMaoDxntduHg)
-* [CodeLyon](https://www.youtube.com/channel/UC08G-UJT58SbkdmcOYyOQVw)
+
+- [reconlx](https://www.youtube.com/channel/UCC-5dJ0BPTRSMaoDxntduHg)
+- [CodeLyon](https://www.youtube.com/channel/UC08G-UJT58SbkdmcOYyOQVw)

@@ -12,4 +12,4 @@ interface Run {
 export type Slash = ApplicationCommandData & {
 	testOnly: boolean;
 	run: Run;
-}
+};
