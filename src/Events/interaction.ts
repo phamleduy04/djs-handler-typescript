@@ -12,7 +12,16 @@ export const event: Event = {
 			const args = [];
 
 			for (let option of interaction.options.data) {
-				if (option.type === 'SUB_COMMAND') {
+				if (option.type === 'SUB_COMMAND_GROUP') {
+					if (option.name) args.push(option.name);
+					for (const op of option.options) {
+						if (op.name) args.push(op.name);
+						if (op.value) args.push(op.value);
+						op.options.forEach((x) => {
+							if (x.value) args.push(x.value);
+						});
+					}
+				} else if (option.type === 'SUB_COMMAND') {
 					if (option.name) args.push(option.name);
 
 					option.options?.forEach((x) => {

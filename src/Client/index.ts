@@ -8,6 +8,7 @@ import mongoose from 'mongoose';
 import consola from 'consola';
 import chalk from 'chalk';
 import { readdirSync } from 'fs';
+import DisTube from 'distube';
 
 class Bot extends Client {
 	public commands: Collection<string, Command> = new Collection();
@@ -18,7 +19,7 @@ class Bot extends Client {
 	public console = consola;
 	public constructor() {
 		super({
-			intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_WEBHOOKS'],
+			intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_WEBHOOKS', 'GUILD_MEMBERS'],
 			partials: ['MESSAGE', 'CHANNEL', 'GUILD_MEMBER', 'USER'],
 		});
 	}
