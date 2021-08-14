@@ -84,6 +84,25 @@ export const event: Event = {
 	
 ```
 
+### Slash Command Snippet for [Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
+
+```json
+"Slash": {
+		"prefix": "!slash",
+		"body": [
+		"import { Slash } from '../../interfaces';\r",
+	"export const slash: Slash = {\r",
+	"name: '',\r", //Command Name
+	"description: '',\r", //Command Description
+	"testOnly: false,\r", //If this property is true, than this command will only available at your test server
+	"options: [],\r", //Slash Command Options
+	"run: async (client, interaction, args) => {\r",
+		//Write your code here
+	"},\r",
+"};"
+		]
+	}
+	```
 ## Credit / reference
 
 - [reconlx](https://www.youtube.com/channel/UCC-5dJ0BPTRSMaoDxntduHg)
