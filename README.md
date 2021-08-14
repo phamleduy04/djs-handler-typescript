@@ -61,6 +61,44 @@ export  const  event:  Event  =  {
 }
 ```
 
+### Command Snippet for [Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
+
+```json
+{
+	// Place your snippets for typescript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+		"Command": {
+	"prefix": "!command",
+	"body": [
+	"import { Command } from '../../interfaces';\r",
+	"export const command: Command = {\r",
+	"name: '',\r",
+	"description: '',\r",
+	"aliases: []\r,",
+	"usage: '',\r",
+	"testOnly: false,\r",
+	"permissions: [],\r",
+	"run: async (client, message, args) => {\r",
+		//Write your code here
+	"},\r",
+"};"
+	]
+}
+	}
+	
+```
+
 ## Credit / reference
 * [reconlx](https://www.youtube.com/channel/UCC-5dJ0BPTRSMaoDxntduHg)
 * [CodeLyon](https://www.youtube.com/channel/UC08G-UJT58SbkdmcOYyOQVw)
