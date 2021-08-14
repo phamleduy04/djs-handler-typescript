@@ -6,15 +6,13 @@ Sorry, I'm not good at english
 
 Please do npm i -g yarn if you don't have yarn installed on your pc, then you can run `yarn install`
 
-### Create config.json in your main folder (not inside src folder)
+### Create .env file in your main folder (not inside src folder)
 
-```json
-{
-	"token": "",
-	"prefix": "",
-	"mongoURI": "",
-	"testServer": ""
-}
+```env
+TOKEN= YOUR BOT TOKEN
+PREFIX= YOUR PREFIX
+MONGOURI= YOUR MONGO URL
+TESTSERVER= YOUR TEST SERVER ID
 ```
 
 ### Commands Usage:
@@ -59,6 +57,31 @@ export const event: Event = {
 		//Write your code here
 	},
 };
+```
+
+### Command Snippet for [Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
+
+```json
+{
+		"Command": {
+	"prefix": "!command",
+	"body": [
+	"import { Command } from '../../interfaces';\r",
+	"export const command: Command = {\r",
+	"name: '',\r",
+	"description: '',\r",
+	"aliases: []\r,",
+	"usage: '',\r",
+	"testOnly: false,\r",
+	"permissions: [],\r",
+	"run: async (client, message, args) => {\r",
+		
+	"},\r",
+"};"
+	]
+}
+	}
+	
 ```
 
 ## Credit / reference
