@@ -59,6 +59,31 @@ export const event: Event = {
 };
 ```
 
+### Command Snippet for [Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
+
+```json
+{
+		"Command": {
+	"prefix": "!command",
+	"body": [
+	"import { Command } from '../../interfaces';\r",
+	"export const command: Command = {\r",
+	"name: '',\r",
+	"description: '',\r",
+	"aliases: []\r,",
+	"usage: '',\r",
+	"testOnly: false,\r",
+	"permissions: [],\r",
+	"run: async (client, message, args) => {\r",
+		
+	"},\r",
+"};"
+	]
+}
+	}
+	
+```
+
 ## Credit / reference
 
 - [reconlx](https://www.youtube.com/channel/UCC-5dJ0BPTRSMaoDxntduHg)
