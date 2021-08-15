@@ -112,5 +112,4 @@ export const event: Event = {
 
 ### Support?
 
-[![Discord](https://img.shields.io/discord/790422584688115713.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Hq8MPwDPPD)
-or dm Z Dev?#6969
+[![Discord](https://img.shields.io/discord/790422584688115713.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Hq8MPwDPPD) or Z Dev?#6969
