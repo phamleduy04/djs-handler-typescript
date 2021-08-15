@@ -1,7 +1,6 @@
 import { Client, Collection } from 'discord.js';
 import dotenv from 'dotenv'
 dotenv.config()
-import conf from '../../config.json';
 import path from 'path';
 import { Slash, Command, Event } from '../interfaces';
 import mongoose from 'mongoose';
