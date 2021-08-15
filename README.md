@@ -108,3 +108,9 @@ export const event: Event = {
 
 - [reconlx](https://www.youtube.com/channel/UCC-5dJ0BPTRSMaoDxntduHg)
 - [CodeLyon](https://www.youtube.com/channel/UC08G-UJT58SbkdmcOYyOQVw)
+
+
+### Support?
+
+[![Discord](https://img.shields.io/discord/790422584688115713.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Hq8MPwDPPD)
+or dm Z Dev?#6969
