@@ -4,7 +4,6 @@ import { Message, MessageEmbed, Permissions } from 'discord.js';
 export const event: Event = {
 	name: 'messageCreate',
 	run: async (client, message: Message) => {
-    
 		if (message.channel.type === 'DM') return;
 		if (message.author.bot || !message.content.startsWith(client.config.PREFIX))
 			return;

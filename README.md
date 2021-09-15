@@ -63,25 +63,24 @@ export const event: Event = {
 
 ```json
 {
-		"Command": {
-	"prefix": "!command",
-	"body": [
-	"import { Command } from '../../interfaces';\r",
-	"export const command: Command = {\r",
-	"name: '',\r",
-	"description: '',\r",
-	"aliases: []\r,",
-	"usage: '',\r",
-	"testOnly: false,\r",
-	"permissions: [],\r",
-	"run: async (client, message, args) => {\r",
-		
-	"},\r",
-"};"
-	]
-}
+	"Command": {
+		"prefix": "!command",
+		"body": [
+			"import { Command } from '../../interfaces';\r",
+			"export const command: Command = {\r",
+			"name: '',\r",
+			"description: '',\r",
+			"aliases: []\r,",
+			"usage: '',\r",
+			"testOnly: false,\r",
+			"permissions: [],\r",
+			"run: async (client, message, args) => {\r",
+
+			"},\r",
+			"};"
+		]
 	}
-	
+}
 ```
 
 ### Slash Command Snippet for [Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
@@ -92,25 +91,24 @@ export const event: Event = {
 		"body": [
 		"import { Slash } from '../../interfaces';\r",
 	"export const slash: Slash = {\r",
-	"name: '',\r", 
+	"name: '',\r",
 	"description: '',\r",
 	"testOnly: false,\r",
-	"options: [],\r", 
+	"options: [],\r",
 	"run: async (client, interaction, args) => {\r",
-		
+
 	"},\r",
 "};"
 		]
 	}
-	
+
 ```
+
 ## Credit / reference
 
 - [reconlx](https://www.youtube.com/channel/UCC-5dJ0BPTRSMaoDxntduHg)
 - [CodeLyon](https://www.youtube.com/channel/UC08G-UJT58SbkdmcOYyOQVw)
 
-
 ### Support?
 
 [![Discord](https://img.shields.io/discord/790422584688115713.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Hq8MPwDPPD)
-

@@ -1,6 +1,6 @@
 import { Client, Collection } from 'discord.js';
-import dotenv from 'dotenv'
-dotenv.config()
+import dotenv from 'dotenv';
+dotenv.config();
 import path from 'path';
 import { Slash, Command, Event } from '../interfaces';
 import mongoose from 'mongoose';
@@ -48,8 +48,7 @@ class Bot extends Client {
 			const commands = readdirSync(`${commandPath}/${dir}`).filter((file) =>
 				file.endsWith('.ts')
 			);
-
-			for (const file of commands) {
+			commands.forEach((file) => {
 				const { command } = require(`${commandPath}/${dir}/${file}`);
 				this.commands.set(command.name, command);
 
@@ -58,7 +57,7 @@ class Bot extends Client {
 						this.aliases.set(alias, command);
 					});
 				}
-			}
+			});
 		});
 
 		// Event
@@ -78,16 +77,15 @@ class Bot extends Client {
 				file.endsWith('.ts')
 			);
 
-			for (const file of slash) {
+			slash.forEach((file) => {
 				const { slash } = require(`${slashPath}/${dir}/${file}`);
-				if (slash.testOnly) {
+				if (slash?.testOnly) {
 					this.slash.set(slash.name, slash);
 					return arrayOfSlashPrivate.push(slash);
 				}
 				this.slash.set(slash.name, slash);
 				arrayOfSlashCommands.push(slash);
-			}
-			// this.console.log({arrayOfSlashCommands, arrayOfSlashPrivate})
+			});
 		});
 		this.on('ready', async () => {
 			await this.guilds.cache

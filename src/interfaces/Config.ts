@@ -6,4 +6,4 @@ declare namespace NodeJS {
 		MONGOURI: string;
 		TESTSERVER: string;
 	}
-  }
+}
