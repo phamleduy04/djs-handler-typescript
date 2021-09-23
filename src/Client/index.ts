@@ -52,7 +52,7 @@ class Bot extends Client {
 				const { command } = require(`${commandPath}/${dir}/${file}`);
 				this.commands.set(command.name, command);
 
-				if (command?.aliases.length !== 0) {
+				if (command?.aliases && command?.aliases.length !== 0) {
 					command.aliases.forEach((alias) => {
 						this.aliases.set(alias, command);
 					});

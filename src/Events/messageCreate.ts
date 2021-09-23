@@ -18,13 +18,13 @@ export const event: Event = {
 		if (command) {
 			if (command.testOnly && message.guild.id !== client.config.TESTSERVER)
 				return;
-			if (command?.permissions.length) {
+			if (command?.permissions && command?.permissions.length !== 0) {
 				let invalidPerms = [];
 				for (const perm of command.permissions) {
 					if (!validPermissions.includes(perm.toString())) {
 						client.console.error(`Invalid Permission: ${perm}`);
 						return message.channel.send(
-							`Error in our code: invalid permission: \`${perm}\``
+							`Error in our code: invalid permission: \`${perm}\`, please contact the developer`
 						);
 					}
 					if (!message.member.permissions.has([perm])) {
